@@ -9,8 +9,9 @@ function Banner() {
         <img src="placeholder" alt="" />
         <div className="callToActionTextWrapper">
           <p>
-            Here's a long block of text telling you why you should purchase
-            things from our store! Its super cool and totally not fake! Wow!
+            Here&apos;s a long block of text telling you why you should purchase
+            things from our store! It&apos;s super cool and totally not fake!
+            Wow!
           </p>
         </div>
       </div>

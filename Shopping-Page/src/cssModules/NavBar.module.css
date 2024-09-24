@@ -1,0 +1,40 @@
+/* NavBar.module.css */
+
+.navBarWrapper {
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.navBarLogo img {
+  width: 100px;
+}
+
+.searchBarWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.searchBarIcon img {
+  width: 20px;
+  height: 20px;
+}
+
+.searchBarInput input {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.HomePageButton p {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.CartButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}

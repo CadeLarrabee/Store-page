@@ -1,29 +1,31 @@
 import { Link } from "react-router-dom";
-
-//TODO: Setup outlet & remove placeholders
+import styles from "../cssModules/NavBar.module.css"; // Import the CSS module
 
 function NavBar() {
   return (
     <>
-      <div className="navBarWrapper">
-        <div className="navBarLogo">
-          <Link to={HomePage}></Link>
+      <div className={styles.navBarWrapper}>
+        <div className={styles.navBarLogo}>
+          <Link to="/">
+            <img src="logo-placeholder.png" alt="Logo" />
+          </Link>
         </div>
         <div>
-          <div className="searchBarWrapper">
-            <div className="searchBarIcon">
-              <img src="placeholder" alt="" />
+          <div className={styles.searchBarWrapper}>
+            <div className={styles.searchBarIcon}>
+              <img src="placeholder" alt="Search" />
             </div>
-            <div className="searchBarInput">
-              <input type="text" />
+            <div className={styles.searchBarInput}>
+              <input type="text" placeholder="Search..." />
             </div>
           </div>
-          <div className="HomePageButton">
-            <Link to={HomePage}></Link>
-            <p>HomePage</p>
+          <div className={styles.HomePageButton}>
+            <Link to="/">
+              <p>HomePage</p>
+            </Link>
           </div>
-          <div className="CartButtonWrapper">
-            <button className="CartButton"></button>
+          <div className={styles.CartButtonWrapper}>
+            <button className={styles.CartButton}>Cart</button>
           </div>
         </div>
       </div>

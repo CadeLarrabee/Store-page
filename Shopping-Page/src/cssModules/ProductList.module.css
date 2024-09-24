@@ -1,0 +1,11 @@
+.productListWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.loadingMessage {
+  font-size: 18px;
+  color: #333;
+}

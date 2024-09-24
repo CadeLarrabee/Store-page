@@ -1,0 +1,44 @@
+.cardWrapper {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 250px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  background-color: #fff;
+}
+
+.cardWrapper:hover {
+  transform: scale(1.05);
+}
+
+.cardImgWrapper {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.cardImgWrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cardBottomTextWrapper {
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.cardBottomTextWrapper p {
+  margin: 5px 0;
+}
+
+.cardBottomTextWrapper p:first-child {
+  font-weight: bold;
+  color: #333;
+}
+
+.cardBottomTextWrapper p:last-child {
+  color: #007bff;
+}
