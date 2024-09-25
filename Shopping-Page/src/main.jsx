@@ -4,11 +4,18 @@ import HomePage from "./pages/HomePage.jsx";
 import ErrorPage from "./pages/error-page";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import { CartProvider } from "./context/CartContext";
+import Cart from "./pages/Cart.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
   },
   //add other paths like this
   // {
@@ -19,6 +26,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </StrictMode>
 );

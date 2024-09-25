@@ -25,7 +25,10 @@ function NavBar() {
             </Link>
           </div>
           <div className={styles.CartButtonWrapper}>
-            <button className={styles.CartButton}>Cart</button>
+            <Link to="/cart">
+              Cart
+              <button className={styles.CartButton}>Cart</button>
+            </Link>
           </div>
         </div>
       </div>

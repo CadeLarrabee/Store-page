@@ -3,6 +3,7 @@ import FeaturedItems from "../Components/FeaturedItems.jsx";
 import Banner from "../Components/Banner.jsx";
 import NavBar from "../Components/NavBar.jsx";
 import ProductList from "../Components/ProductList.jsx";
+import Cart from "./pages/Cart.jsx";
 
 function HomePage() {
   return (
@@ -12,6 +13,7 @@ function HomePage() {
         <Banner />
         <FeaturedItems />
         <ProductList />
+        <Cart />
       </div>
     </>
   );
