@@ -6,21 +6,22 @@ function Card({ img, name, price, link }) {
   console.log("name:", name, "price:", price);
 
   return (
-    <>
-      <div className={styles.cardWrapper}>
-        <Link to={link}>
-          <div className={styles.card}>
-            <div className={styles.cardImgWrapper}>
-              <img src={img} alt={name} />
-            </div>
-            <div className={styles.CardBottomTextWrapper}>
-              <p>{typeof name === "object" ? JSON.stringify(name) : name}</p>
-              <p>{typeof price === "object" ? JSON.stringify(price) : price}</p>
-            </div>
+    <div className={styles.cardWrapper}>
+      <div className={styles.card}>
+        <Link to={link} className={styles.cardLink}>
+          <div className={styles.cardImgWrapper}>
+            <img src={img} alt={name} />
+          </div>
+          <div className={styles.cardBottomTextWrapper}>
+            <p>{typeof name === "object" ? JSON.stringify(name) : name}</p>
+            <p>{typeof price === "object" ? JSON.stringify(price) : price}</p>
           </div>
         </Link>
+        <button className={styles.cardAddToCart}>
+          <img src="placeholder" alt="Add to Cart" />
+        </button>
       </div>
-    </>
+    </div>
   );
 }
 

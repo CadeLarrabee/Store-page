@@ -5,7 +5,6 @@ import ErrorPage from "./pages/error-page";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { CartProvider } from "./context/CartContext";
-import Cart from "./pages/Cart.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,10 +12,10 @@ const router = createBrowserRouter([
     element: <HomePage />,
     errorElement: <ErrorPage />,
   },
-  {
-    path: "/cart",
-    element: <Cart />,
-  },
+  // {
+  //   path: "/cart",
+  //   element: <Cart />,
+  // },
   //add other paths like this
   // {
   //   path: "contacts/:contactId",

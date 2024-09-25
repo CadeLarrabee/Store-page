@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "../cssModules/NavBar.module.css"; // Import the CSS module
+import PropTypes from "prop-types";
 
-function NavBar() {
+function NavBar({ toggleCart }) {
   return (
     <>
       <div className={styles.navBarWrapper}>
@@ -25,15 +26,18 @@ function NavBar() {
             </Link>
           </div>
           <div className={styles.CartButtonWrapper}>
-            <Link to="/cart">
+            <button className={styles.CartButton} onClick={toggleCart}>
               Cart
-              <button className={styles.CartButton}>Cart</button>
-            </Link>
+            </button>
           </div>
         </div>
       </div>
     </>
   );
 }
+
+NavBar.propTypes = {
+  toggleCart: PropTypes.func.isRequired,
+};
 
 export default NavBar;
