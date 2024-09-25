@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import PropTypes from "prop-types";
 
-const CartContext = createContext();
+export const CartContext = createContext();
 
 export function useCart() {
   return useContext(CartContext);

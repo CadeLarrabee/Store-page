@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import styles from "../cssModules/NavBar.module.css"; // Import the CSS module
 import PropTypes from "prop-types";
+import { CartContext } from "../context/CartProvider";
+import { useContext } from "react";
 
 function NavBar({ toggleCart }) {
+  const { cart } = useContext(CartContext);
   return (
     <>
       <div className={styles.navBarWrapper}>
@@ -27,7 +30,7 @@ function NavBar({ toggleCart }) {
           </div>
           <div className={styles.CartButtonWrapper}>
             <button className={styles.CartButton} onClick={toggleCart}>
-              Cart
+              Cart {cart.length > 0 && `(${cart.length})`}
             </button>
           </div>
         </div>

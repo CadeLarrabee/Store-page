@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import styles from "../cssModules/Card.module.css";
 import PropTypes from "prop-types";
+import { CartContext } from "../context/CartProvider";
 
 function Card({ img, name, price, link }) {
   console.log("name:", name, "price:", price);
+  const { addToCart } = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    const product = { img, name, price, link };
+    addToCart(product);
+  };
 
   return (
     <div className={styles.cardWrapper}>
@@ -17,7 +25,7 @@ function Card({ img, name, price, link }) {
             <p>{typeof price === "object" ? JSON.stringify(price) : price}</p>
           </div>
         </Link>
-        <button className={styles.cardAddToCart}>
+        <button className={styles.cardAddToCart} onClick={handleAddToCart}>
           <img src="placeholder" alt="Add to Cart" />
         </button>
       </div>

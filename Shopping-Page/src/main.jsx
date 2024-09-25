@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage.jsx";
 import ErrorPage from "./pages/error-page";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { CartProvider } from "./context/CartContext";
+import { CartProvider } from "./context/CartProvider.jsx";
 
 const router = createBrowserRouter([
   {
