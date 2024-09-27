@@ -6,6 +6,7 @@ import { useContext } from "react";
 
 function NavBar({ toggleCart }) {
   const { cart } = useContext(CartContext);
+
   return (
     <>
       <div className={styles.navBarWrapper}>

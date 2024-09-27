@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Card from "../Components/card.jsx";
+import Card from "./Card.jsx";
 import styles from "../cssModules/ProductList.module.css";
 
 function ProductList() {

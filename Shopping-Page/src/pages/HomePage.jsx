@@ -13,6 +13,10 @@ function HomePage() {
     setCartVisible((prev) => !prev);
   }
 
+  const closeCart = () => {
+    setCartVisible(false);
+  };
+
   return (
     <>
       <div className={styles.HomePage}>
@@ -20,7 +24,9 @@ function HomePage() {
         <Banner />
         <FeaturedItems />
         <ProductList />
-        {cartVisible && <CartSideBar />}
+        {cartVisible && (
+          <CartSideBar closeCart={closeCart} isVisible={cartVisible} />
+        )}
       </div>
     </>
   );

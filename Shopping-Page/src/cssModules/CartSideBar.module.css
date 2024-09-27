@@ -1,0 +1,112 @@
+/* General sidebar styles */
+.cartSidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #f9f9f9;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%); /* Hidden by default */
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* When the sidebar is open, move it into view */
+.cartSidebar.open {
+  transform: translateX(0);
+}
+
+.cartSidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.cartSidebarTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cartSidebarClose {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.cartItem img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.cartItemDetails {
+  flex-grow: 1;
+}
+
+.cartItemName {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.cartItemPrice {
+  color: #333;
+  font-size: 14px;
+}
+
+.cartItemRemove {
+  background-color: #ff6b6b;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cartItemRemove:hover {
+  background-color: #ff4d4d;
+}
+
+.cartSidebarFooter {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalPrice {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.checkoutButton {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.checkoutButton:hover {
+  background-color: #4cae4c;
+}

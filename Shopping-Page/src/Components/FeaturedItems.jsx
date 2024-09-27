@@ -1,4 +1,4 @@
-import Card from "../Components/card.jsx";
+import Card from "./Card.jsx";
 import { useEffect, useState } from "react";
 import styles from "../cssModules/FeaturedItems.module.css";
 
