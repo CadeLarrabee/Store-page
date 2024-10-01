@@ -1,19 +1,22 @@
-//import { Link } from "react-router-dom";
-
+import styles from "../cssModules/Banner.module.css";
 //TODO: Setup outlet & remove placeholders
 
 function Banner() {
   return (
     <>
-      <div className="BannerWrapper">
+      <div className={styles.BannerWrapper}>
         <img src="placeholder" alt="" />
-        <div className="callToActionTextWrapper">
-          <p>
-            Here&apos;s a long block of text telling you why you should purchase
-            things from our store! It&apos;s super cool and totally not fake!
-            Wow!
+        <div className={styles.callToActionTextWrapper}>
+          <h1 className={styles.callToActionTitle}>
+            Your one-stop destination for all your shopping needs
+          </h1>
+          <p className={styles.callToActionText}>
+            Discover an unparalleled shopping experience with our extensive
+            selection of products, unbeatable prices, and exceptional customer
+            service. Shop now and transform your shopping journey with us.
           </p>
         </div>
+        <button className={styles.callToActionButton}>Shop Now</button>
       </div>
     </>
   );

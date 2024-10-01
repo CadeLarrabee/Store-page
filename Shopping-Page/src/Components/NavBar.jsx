@@ -3,6 +3,9 @@ import styles from "../cssModules/NavBar.module.css"; // Import the CSS module
 import PropTypes from "prop-types";
 import { CartContext } from "../context/CartProvider";
 import { useContext } from "react";
+import cartImage from "../assets/cart-outline.svg";
+import Logo from "../assets/logoipsum-327.svg";
+import searchImage from "../assets/search-outline.svg";
 
 function NavBar({ toggleCart }) {
   const { cart } = useContext(CartContext);
@@ -12,26 +15,36 @@ function NavBar({ toggleCart }) {
       <div className={styles.navBarWrapper}>
         <div className={styles.navBarLogo}>
           <Link to="/">
-            <img src="logo-placeholder.png" alt="Logo" />
+            <img src={Logo} alt="Logo" />
           </Link>
         </div>
-        <div>
-          <div className={styles.searchBarWrapper}>
-            <div className={styles.searchBarIcon}>
-              <img src="placeholder" alt="Search" />
-            </div>
-            <div className={styles.searchBarInput}>
-              <input type="text" placeholder="Search..." />
-            </div>
+        <div className={styles.searchBarWrapper}>
+          <div className={styles.searchBarIcon}>
+            <img src={searchImage} alt="Search" />
           </div>
-          <div className={styles.HomePageButton}>
+          <div className={styles.searchBarInput}>
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+        <div className={styles.navButtons}>
+          <div className={styles.HomePageTextLink}>
             <Link to="/">
-              <p>HomePage</p>
+              <p>Home</p>
+            </Link>
+          </div>
+          <div className={styles.HomePageTextLink}>
+            <Link to="/store">
+              <p>Store</p>
             </Link>
           </div>
           <div className={styles.CartButtonWrapper}>
             <button className={styles.CartButton} onClick={toggleCart}>
-              Cart {cart.length > 0 && `(${cart.length})`}
+              <img
+                src={cartImage}
+                alt="cart"
+                className={styles.CartImage}
+              ></img>
+              {cart.length > 0 && `(${cart.length})`}
             </button>
           </div>
         </div>

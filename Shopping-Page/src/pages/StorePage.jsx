@@ -1,11 +1,10 @@
 import { useState } from "react";
 import styles from "../cssModules/HomePage.module.css";
-import FeaturedItems from "../Components/FeaturedItems.jsx";
-import Banner from "../Components/Banner.jsx";
 import NavBar from "../Components/NavBar.jsx";
+import ProductList from "../Components/ProductList.jsx";
 import CartSideBar from "../Components/CartSideBar.jsx";
 
-function HomePage() {
+function StorePage() {
   const [cartVisible, setCartVisible] = useState(false);
 
   function toggleCart() {
@@ -20,8 +19,7 @@ function HomePage() {
     <>
       <div className={styles.HomePage}>
         <NavBar toggleCart={toggleCart} />
-        <Banner />
-        <FeaturedItems />
+        <ProductList />
         {cartVisible && (
           <CartSideBar closeCart={closeCart} isVisible={cartVisible} />
         )}
@@ -30,4 +28,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default StorePage;

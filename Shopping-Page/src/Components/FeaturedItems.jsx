@@ -16,7 +16,7 @@ function FeaturedItems() {
 
   return (
     <div className={styles.featuredItemsWrapper}>
-      <div>
+      <div className={styles.featuredTitleWrapper}>
         <h1 className={styles.featuredItemsTitle}>Featured Items</h1>
       </div>
       <div className={styles.featuredItemsCardWrapper}>

@@ -10,12 +10,23 @@ export function useCart() {
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
-  function addToCart(item) {
+  // function AddToCart(item, quantity) {
+  //   for (let i = 0; i < quantity; i++) {
+  //     setCart((prevCart) => [...prevCart, item]);
+  //   }
+  // }
+  function AddToCart(item) {
     setCart((prevCart) => [...prevCart, item]);
   }
 
+  const removeFromCart = (item) => {
+    setCart((prevCart) =>
+      prevCart.filter((cartItem) => cartItem.id !== item.id)
+    );
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, AddToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
