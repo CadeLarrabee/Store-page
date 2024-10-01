@@ -4,19 +4,19 @@ import PropTypes from "prop-types";
 
 function Card({ img, name, price, link }) {
   return (
-    <div className={styles.cardWrapper}>
-      <Link to={link} className={styles.cardLink}>
+    <Link to={link} className={styles.cardLink}>
+      <div className={styles.cardWrapper}>
         <div className={styles.cardImgWrapper}>
           <img src={img} alt={name} />
         </div>
-      </Link>
-      <div className={styles.cardBottomWrapper}>
-        <div className={styles.cardBottomTextWrapper}>
-          <p>{typeof name === "object" ? JSON.stringify(name) : name}</p>
-          <p>{typeof price === "object" ? JSON.stringify(price) : price}</p>
+        <div className={styles.cardBottomWrapper}>
+          <div className={styles.cardBottomTextWrapper}>
+            <p>{typeof name === "object" ? JSON.stringify(name) : name}</p>
+            <p>{typeof price === "object" ? JSON.stringify(price) : price}</p>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

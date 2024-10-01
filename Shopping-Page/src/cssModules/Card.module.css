@@ -67,3 +67,7 @@
 .cardBottomTextWrapper p:last-child {
   color: #007bff;
 }
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+}

@@ -5,7 +5,7 @@ import { CartContext } from "../context/CartProvider";
 import { useContext } from "react";
 import cartImage from "../assets/cart-outline.svg";
 import Logo from "../assets/logoipsum-327.svg";
-import searchImage from "../assets/search-outline.svg";
+import SearchInput from "../Components/SearchBar.jsx";
 
 function NavBar({ toggleCart }) {
   const { cart } = useContext(CartContext);
@@ -18,14 +18,7 @@ function NavBar({ toggleCart }) {
             <img src={Logo} alt="Logo" />
           </Link>
         </div>
-        <div className={styles.searchBarWrapper}>
-          <div className={styles.searchBarIcon}>
-            <img src={searchImage} alt="Search" />
-          </div>
-          <div className={styles.searchBarInput}>
-            <input type="text" placeholder="Search..." />
-          </div>
-        </div>
+        <SearchInput />
         <div className={styles.navButtons}>
           <div className={styles.HomePageTextLink}>
             <Link to="/">
